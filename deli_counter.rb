@@ -15,9 +15,20 @@ def line(name)
   end
 end
 
-def take_a_number(katz_deli, name)
-  katz_deli << name
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+# def take_a_number(katz_deli, name)
+#   katz_deli << name
+#   puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+# end
+
+def take_a_number_busy(katz_deli)
+  counter = 0
+  if counter == 0 
+    puts "There is nobody on line."
+else
+  katz_deli.length.do |name|
+    puts "You are number #{counter} on line."
+    counter += 1
+  end
 end
 
 def now_serving(katz_deli)
